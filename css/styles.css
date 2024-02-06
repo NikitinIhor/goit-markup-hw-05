@@ -225,178 +225,6 @@ nav {
 .btn:focus {
     background-color: #404BBF;
 }
-/* --------------------------------------POPUP */
-
-.one-popup {
-    display: none;
-}
-
-.is-open {
-    display: block;
-    background-color: rgba(252, 252, 252, 1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 408px;
-    height: 584px;
-    transform: translate(-50%,-50%);
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.2);
-    padding: 24px;
-}
-
-.close-popup {  
-    width: 24px;
-    height: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background-color: rgba(231, 233, 252, 1);
-    margin-bottom: 24px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.legend {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: rgba(46, 47, 66, 1);
-    text-align: center;
-    text-transform: capitalize;
-    margin-bottom: 16px;
-}
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 8px;
-}
-
-.form-label {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: rgba(142, 143, 153, 1);
-    text-transform: capitalize;
-    margin-bottom: 4px;
-}
-
-.input-box {
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-name,
-.form-phone,
-.form-email {
-    height: 40px;
-    border: none;
-    outline: none;
-}
-
-.input-box:hover, 
-.input-box:focus {
-    border-color: rgba(77, 90, 229, 1);
-}
-
-.name-icon {
-    margin-right: 4px;
-}
-
-.name-svg,
-.phone-svg,
-.email-svg {
-    margin-left: 19px;
-    fill: rgba(46, 47, 66, 1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-box:hover .name-svg, .input-box:focus .name-svg, 
-.input-box:hover .phone-svg, .input-box:focus .phone-svg, 
-.input-box:hover .email-svg, .input-box:focus .email-svg {
-    fill: rgba(77, 90, 229, 1);
-}
-
-.userComment {
-    resize: none;
-}
-
-.userComment::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
-}
-
-.userComment {
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    min-height: 120px;
-    padding: 12px 16px;
-}
-
-.checkbox-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 24px;
-}
-
-.checkbox-text,
-.accept-link {
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-}
-
-.checkbox-text {
-    line-height: 1.16em;
-    color: rgba(142, 143, 153, 1);
-}
-
-.accept-link {
-    line-height: 1.13em;
-    color: rgba(77, 90, 229, 1);
-    text-decoration: underline;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.accept-link:hover {
-    color: #404BBF;
-}
-
-.send-popup {
-    display: block;
-    margin: 0 auto;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 1);
-    text-transform: capitalize;
-    padding: 16px 32px;
-    background-color: rgba(77, 90, 229, 1);
-    text-align: center;
-    border-radius: 4px;
-    min-width: 169px;
-    cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.send-popup:hover,
-.send-popup:focus {
-    background-color: #404BBF;
-}
-
 /* --------------------------------------section2 */
 
 .two {
@@ -748,6 +576,7 @@ nav {
     background-color: rgba(77, 90, 229, 1);
     height: 40px;
     text-transform: capitalize;
+    border: none; 
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -760,4 +589,189 @@ nav {
 
 .footer-btn-icon {
     margin-left: 16px;
+}
+/* --------------------------------------POPUP */
+
+.popup-wrapper {
+    background-color: rgba(46, 47, 66, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup {
+    position: absolute;
+    width: 408px;
+    min-height: 584px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 72px 24px 24px 24px;
+    background-color: rgba(252, 252, 252, 1);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-popup {  
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: rgba(231, 233, 252, 1);
+    margin-bottom: 24px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-popup:hover,
+.close-popup:focus  {
+    border: none;
+    background-color: #404bbf;
+}
+
+.close-popup-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.close-popup:hover .close-popup-icon,
+.close-popup:hover .close-popup-icon {
+    fill: rgba(252, 252, 252, 1);
+}
+
+.popup-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: rgba(46, 47, 66, 1);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+}
+
+.form-container {
+    margin-bottom: 8px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(142, 143, 153, 1);
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+
+.input-box {
+    position: relative;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+}
+
+.input-svg {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.userComment {
+    width: 100%;
+    resize: none;
+}
+
+.userComment::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.userComment {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 120px;
+    padding: 12px 16px;
+}
+
+.checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.checkbox-text,
+.accept-link {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+}
+
+.checkbox-text {
+    line-height: 1.16em;
+    color: rgba(142, 143, 153, 1);
+}
+
+.accept-link {
+    line-height: 1.13em;
+    color: rgba(77, 90, 229, 1);
+    text-decoration: underline;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accept-link:hover {
+    color: #404BBF;
+}
+
+.send-popup {
+    display: block;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 1);
+    text-transform: capitalize;
+    padding: 16px 32px;
+    background-color: rgba(77, 90, 229, 1);
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    min-width: 169px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-popup:hover,
+.send-popup:focus {
+    background-color: #404BBF;
 }

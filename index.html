@@ -52,49 +52,6 @@
             <div class="container one-container">
                 <h1 class="title">Effective Solutions<br>for Your Business</h1>
                 <button class="btn" type="button">Order Service</button>
-                <div class="one-popup is-open">
-                    <button type="button" class="close-popup">
-                        <svg class="close-popup-icon" width="8" height="8">
-                            <use href="./images/icons.svg#icon-Vector"></use>
-                        </svg>
-                    </button>
-                    <form class="form-popup">
-                        <fieldset class="contacts">
-                            <legend class="legend">Leave your contacts and we will call you back</legend>
-                            <label class="form-label" for="name">Name</label>
-                            <div class="input-box">
-                                <svg class="name-svg" width="12" height="12">
-                                    <use class="name-icon" href="./images/icons.svg#icon-user"></use>
-                                </svg>
-                                <input name="userName" id="name" type="text" class="form-name">
-                            </div>
-                            <label class="form-label" for="phone">Phone</label>
-                            <div class="input-box">
-                                <svg class="phone-svg" width="13" height="13">
-                                    <use class="phone-icon" href="./images/icons.svg#icon-phone"></use>
-                                </svg>
-                                <input name="userPhone" id="phone" type="number" class="form-phone">
-                            </div>
-                            <label class="form-label" for="email">Email</label>
-                            <div class="input-box">
-                                <svg class="email-svg" width="15" height="12">
-                                    <use class="email-icon" href="./images/icons.svg#icon-mail"></use>
-                                </svg>
-                                <input name="userEmail" id="email" type="text" class="form-email">
-                            </div>
-
-                            <label class="form-label" for="Comment">Comment</label>
-                            <textarea class="userComment" name="Comment" id="Comment"
-                                placeholder="Text input"></textarea>
-                        </fieldset>
-                        <div class="checkbox-box">
-                            <input class="userAccept" name="accept" type="checkbox" id="accept">
-                            <p class="checkbox-text">I accept the terms and conditions of the <span
-                                    class="accept-span"><a href="" class="accept-link">Privacy Policy</a></span></p>
-                        </div>
-                        <button type="submit" class="send-popup">Send</button>
-                    </form>
-                </div>
             </div>
         </section>
         <section class="two">
@@ -428,14 +385,63 @@
                     <label class="form-label">
                         <input name='subscribe' class="footer-input" type="email" id="subscribe" placeholder="E-mail">
                     </label>
-                        <button type="submit" class="subscribe-btn">Subscribe <svg class="footer-btn-icon" width="24"
-                                height="20">
-                                <use href="./images/icons.svg#icon-icon-send"></use>
-                            </svg></button>
+                    <button type="submit" class="subscribe-btn">Subscribe <svg class="footer-btn-icon" width="24"
+                            height="24">
+                            <use href="./images/icons.svg#icon-icon-send"></use>
+                        </svg></button>
                 </form>
             </div>
         </div>
     </footer>
+    <div class="popup-wrapper">
+        <div class="popup">
+            <button type="button" class="close-popup">
+                <svg class="close-popup-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                </svg>
+            </button>
+            <p class="poput-title">Leave your contacts and we will call you back</p>
+            <form class="form-popup">
+                <div class="form-container">
+                    <label class="form-label" for="user-name">Name</label>
+                    <div class="input-box">
+                        <input name="user-name" id="user-name" type="text" class="form-name form-input">
+                        <svg class="input-svg" width="12" height="12">
+                            <use class="name-icon" href="./images/icons.svg#icon-user"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="form-label" for="user-phone">Phone</label>
+                    <div class="input-box">
+                        <input name="user-phone" id="user-phone" type="number" class="form-phone form-input">
+                        <svg class="input-svg" width="13" height="13">
+                            <use class="phone-icon" href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="form-label" for="user-email">Email</label>
+                    <div class="input-box">
+                        <input name="user-email" id="user-email" type="text" class="form-email form-input">
+                        <svg class="input-svg" width="15" height="12">
+                            <use class="email-icon" href="./images/icons.svg#icon-mail"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="form-label" for="Comment">Comment</label>
+                    <textarea class="userComment" name="Comment" id="Comment" placeholder="Text input"></textarea>
+                </div>
+                <div class="checkbox-box">
+                    <input class="userAccept" name="accept" type="checkbox" id="accept">
+                    <p class="checkbox-text">I accept the terms and conditions of the <span class="accept-span"><a
+                                href="" class="accept-link">Privacy Policy</a></span></p>
+                </div>
+                <button type="submit" class="send-popup">Send</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
