@@ -768,7 +768,7 @@ nav {
     
 }
 
-.user-accept[type="checkbox"]:checked .accept-span {
+.user-accept:checked .accept-svg {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;;
