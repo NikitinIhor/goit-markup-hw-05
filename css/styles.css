@@ -768,10 +768,10 @@ nav {
     
 }
 
-.user-accept:checked .accept-svg {
+.user-accept:checked .accept-span {
     background-color: #404bbf;
-    border: none;
-    fill: #F4F4FD;;
+    /* border: none;
+    fill: #F4F4FD;; */
 }
 
 .accept-link {
