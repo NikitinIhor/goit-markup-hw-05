@@ -240,8 +240,7 @@ nav {
     width: calc((100% - 48px) /4);
 }
 
-.title-two,
-.user-accept[type="checkbox"] {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
