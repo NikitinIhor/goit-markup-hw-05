@@ -752,6 +752,7 @@ input:focus .form-input {
     text-transform: capitalize;
     line-height: 1.17;
     color: rgba(142, 143, 153, 1);
+    cursor: pointer;
 }
 
 .accept-span {
@@ -767,17 +768,10 @@ input:focus .form-input {
 
 }
 
-.user-accept:checked .accept-span {
+.checkbox-text input:checked ~.accept-span {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
-}
-
-.user-accept:checked .accept-span {
-    background-color: #404bbf;
-    border: none;
-    fill: #F4F4FD;
-    ;
 }
 
 .accept-link {
