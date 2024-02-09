@@ -18,11 +18,11 @@ a {
     text-decoration: none;
 }
 
-fieldset {
+/* fieldset {
     padding: 0;
     margin: 0;
     border: none;
-}
+} */
 
 ul {
     list-style: none;
@@ -224,6 +224,7 @@ nav {
 .btn:focus {
     background-color: #404BBF;
 }
+
 /* --------------------------------------section2 */
 
 .two {
@@ -239,7 +240,8 @@ nav {
     width: calc((100% - 48px) /4);
 }
 
-.title-two {
+.title-two,
+[type="checkbox"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -575,7 +577,7 @@ nav {
     background-color: rgba(77, 90, 229, 1);
     height: 40px;
     text-transform: capitalize;
-    border: none; 
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -589,6 +591,7 @@ nav {
 .footer-btn-icon {
     margin-left: 16px;
 }
+
 /* --------------------------------------POPUP */
 
 .popup-wrapper {
@@ -615,7 +618,7 @@ nav {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-popup {  
+.close-popup {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -634,13 +637,13 @@ nav {
 }
 
 .close-popup:hover,
-.close-popup:focus  {
+.close-popup:focus {
     border: none;
     background-color: #404bbf;
 }
 
 .close-popup-svg {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-popup:hover .close-popup-icon,
@@ -701,13 +704,17 @@ nav {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus .name-icon,
+/* .form-input:focus .name-icon,
 .form-input:focus .phone-icon,
-.form-input:focus .email-icon{
+.form-input:focus .email-icon {
+    fill: #4D5AE5;
+} */
+
+input:focus .form-input {
     fill: #4D5AE5;
 }
 
-.form-texarea-container{
+.form-texarea-container {
     margin-bottom: 16px;
 }
 
@@ -739,7 +746,7 @@ nav {
     gap: 8px;
 }
 
-.checkbox-text { 
+.checkbox-text {
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.04em;
@@ -765,13 +772,14 @@ nav {
     border-radius: 2px;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
 }
 
 .user-accept:checked .accept-span {
     background-color: #404bbf;
-    /* border: none;
-    fill: #F4F4FD;; */
+    border: none;
+    fill: #F4F4FD;
+    ;
 }
 
 .accept-link {
