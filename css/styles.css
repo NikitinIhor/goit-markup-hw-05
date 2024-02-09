@@ -768,7 +768,7 @@ input:focus .form-input {
 
 }
 
-.checkbox-text input:checked ~.accept-span {
+.user-accept[type="checkbox"]:checked .accept-span {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
